@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  项目
+//
+//  Created by LiJiale on 15/7/22.
+//  Copyright (c) 2015年 小码哥. All rights reserved.
+//
+
+#ifndef ___PrefixHeader_pch
+#define ___PrefixHeader_pch
+
+#import "UIView+LJLExtension.h"
+#import "UIBarButtonItem+LJLExtension.h"
+
+#ifdef DEBUG
+#define LJLLog(...) NSLog(__VA_ARGS__)
+#else
+#define LJLLog(...)
+#endif
+
+#define LJLLogFunc LJLLog(@"%s", __func__)
+
+#define LJLRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define LJLGlobalBg LJLRGBColor(223,223, 223)
+#endif

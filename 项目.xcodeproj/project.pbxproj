@@ -34,6 +34,8 @@
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
 		3D683FED1B64FD860098EC71 /* LJLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D683FEB1B64FD860098EC71 /* LJLLoginRegisterViewController.xib */; };
 		3D683FF01B6503B90098EC71 /* LJLVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEF1B6503B90098EC71 /* LJLVerticalButton.m */; };
+		3D8EEB531B662EFB00134ECB /* LJLPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8EEB521B662EFB00134ECB /* LJLPushGuideView.m */; };
+		3D8EEB551B662F1700134ECB /* LJLPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */; };
 		3DA244421B654D3100DA1931 /* LJLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA244411B654D3100DA1931 /* LJLTextField.m */; };
 		3DFA0B0A1B63884D003FE085 /* LJLRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0B091B63884D003FE085 /* LJLRecommendTagsViewController.m */; };
 		3DFA0B0D1B638B45003FE085 /* LJLRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA0B0C1B638B45003FE085 /* LJLRecommendTag.m */; };
@@ -101,6 +103,9 @@
 		3D683FEB1B64FD860098EC71 /* LJLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		3D683FEE1B6503B90098EC71 /* LJLVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLVerticalButton.h; sourceTree = "<group>"; };
 		3D683FEF1B6503B90098EC71 /* LJLVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLVerticalButton.m; sourceTree = "<group>"; };
+		3D8EEB511B662EFB00134ECB /* LJLPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPushGuideView.h; sourceTree = "<group>"; };
+		3D8EEB521B662EFB00134ECB /* LJLPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPushGuideView.m; sourceTree = "<group>"; };
+		3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLPushGuideView.xib; sourceTree = "<group>"; };
 		3DA244401B654D3100DA1931 /* LJLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLTextField.h; sourceTree = "<group>"; };
 		3DA244411B654D3100DA1931 /* LJLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLTextField.m; sourceTree = "<group>"; };
 		3DFA0B081B63884D003FE085 /* LJLRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLRecommendTagsViewController.h; sourceTree = "<group>"; };
@@ -347,6 +352,9 @@
 			children = (
 				3D43179A1B5FF41600D17883 /* LJLTabBar.h */,
 				3D43179B1B5FF41600D17883 /* LJLTabBar.m */,
+				3D8EEB511B662EFB00134ECB /* LJLPushGuideView.h */,
+				3D8EEB521B662EFB00134ECB /* LJLPushGuideView.m */,
+				3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -506,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8EEB551B662F1700134ECB /* LJLPushGuideView.xib in Resources */,
 				3D5530081B5F449E005EDA84 /* Images.xcassets in Resources */,
 				3D4317AA1B6000AA00D17883 /* LJLFriendTrendsViewController.xib in Resources */,
 				3DFA0B121B638C1F003FE085 /* LJLRecommendTagCell.xib in Resources */,
@@ -571,6 +580,7 @@
 				3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */,
 				3D3B04061B624EEE002CC74E /* LJLRecommendCategoryCell.m in Sources */,
 				3D43179D1B5FF41600D17883 /* LJLFriendTrendsViewController.m in Sources */,
+				3D8EEB531B662EFB00134ECB /* LJLPushGuideView.m in Sources */,
 				3D4317A21B5FF41600D17883 /* UIView+LJLExtension.m in Sources */,
 				3DA244421B654D3100DA1931 /* LJLTextField.m in Sources */,
 				3D4317A11B5FF41600D17883 /* UIBarButtonItem+LJLExtension.m in Sources */,

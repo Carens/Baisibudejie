@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LJLTabBarViewController.h"
+#import "LJLPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,8 @@
     
     //显示窗口
     [self.window makeKeyAndVisible];
+    
+    [LJLPushGuideView show];
     
     return YES;
 }

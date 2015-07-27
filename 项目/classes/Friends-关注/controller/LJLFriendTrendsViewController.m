@@ -8,6 +8,7 @@
 
 #import "LJLFriendTrendsViewController.h"
 #import "LJLRecommendViewController.h"
+#import "LJLLoginRegisterViewController.h"
 
 @interface LJLFriendTrendsViewController ()
 
@@ -29,6 +30,13 @@
     
     LJLRecommendViewController *recommendVc = [[LJLRecommendViewController alloc] init];
     [self.navigationController pushViewController:recommendVc animated:YES];
+}
+- (IBAction)LoginRegister:(id)sender {
+    
+    //modal到快速登陆控制器
+    LJLLoginRegisterViewController *LoginRegister = [[LJLLoginRegisterViewController alloc] init];
+    
+    [self presentViewController:LoginRegister animated:YES completion:nil];
 }
 
 @end

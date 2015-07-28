@@ -13,9 +13,10 @@
 
 //底部红色标签
 @property (nonatomic,weak) UIView *indicatorView;
-
 //选中的按钮
 @property (nonatomic,weak) UIButton *selectedButton;
+//标签栏
+@property (nonatomic,weak) UIView *titlesView;
 
 @end
 
@@ -29,6 +30,23 @@
     
     //设置标签栏
     [self setupTitlesView];
+    
+    //设置底部scrollView
+    [self setupContentView];
+}
+//设置底部scrollView
+- (void)setupContentView
+{
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    UIScrollView *contentView = [[UIScrollView alloc] init];
+    contentView.frame = self.view.bounds;
+    contentView.backgroundColor = [UIColor blackColor];
+    //设置内边距
+    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    contentView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    [self.view insertSubview:contentView atIndex:0];
 }
 
 //设置标签栏
@@ -41,7 +59,7 @@
     titlesView.y = 64;
     titlesView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:titlesView];
-    
+    self.titlesView = titlesView;
     
     //底部的红色指示器
     UIView *indicatorView = [[UIView alloc] init];

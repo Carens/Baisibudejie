@@ -11,6 +11,11 @@
 		3D3B04061B624EEE002CC74E /* LJLRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B04041B624EEE002CC74E /* LJLRecommendCategoryCell.m */; };
 		3D3B04071B624EEE002CC74E /* LJLRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D3B04051B624EEE002CC74E /* LJLRecommendCategoryCell.xib */; };
 		3D3F73821B61CF9E00EE1549 /* LJLRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F73811B61CF9E00EE1549 /* LJLRecommendCategory.m */; };
+		3D3FCEEF1B67609700C76DA7 /* LJLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FCEEE1B67609700C76DA7 /* LJLAllViewController.m */; };
+		3D3FCEF51B6760CC00C76DA7 /* LJLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FCEF41B6760CC00C76DA7 /* LJLVideoViewController.m */; };
+		3D3FCEF81B6760E500C76DA7 /* LJLVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FCEF71B6760E500C76DA7 /* LJLVoiceViewController.m */; };
+		3D3FCEFB1B67615800C76DA7 /* LJLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FCEFA1B67615800C76DA7 /* LJLPictureViewController.m */; };
+		3D3FCEFE1B67618B00C76DA7 /* LJLWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FCEFD1B67618B00C76DA7 /* LJLWordViewController.m */; };
 		3D43179C1B5FF41600D17883 /* LJLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4317771B5FF41600D17883 /* LJLEssenceViewController.m */; };
 		3D43179D1B5FF41600D17883 /* LJLFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D43177D1B5FF41600D17883 /* LJLFriendTrendsViewController.m */; };
 		3D43179E1B5FF41600D17883 /* LJLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4317831B5FF41600D17883 /* LJLMeViewController.m */; };
@@ -34,6 +39,7 @@
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
 		3D683FED1B64FD860098EC71 /* LJLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D683FEB1B64FD860098EC71 /* LJLLoginRegisterViewController.xib */; };
 		3D683FF01B6503B90098EC71 /* LJLVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEF1B6503B90098EC71 /* LJLVerticalButton.m */; };
+		3D8A5F361B68F303009FF2C0 /* LJLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A5F351B68F303009FF2C0 /* LJLTopic.m */; };
 		3D8EEB531B662EFB00134ECB /* LJLPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8EEB521B662EFB00134ECB /* LJLPushGuideView.m */; };
 		3D8EEB551B662F1700134ECB /* LJLPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */; };
 		3DA244421B654D3100DA1931 /* LJLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA244411B654D3100DA1931 /* LJLTextField.m */; };
@@ -60,6 +66,16 @@
 		3D3B04051B624EEE002CC74E /* LJLRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLRecommendCategoryCell.xib; sourceTree = "<group>"; };
 		3D3F73801B61CF9E00EE1549 /* LJLRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLRecommendCategory.h; sourceTree = "<group>"; };
 		3D3F73811B61CF9E00EE1549 /* LJLRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLRecommendCategory.m; sourceTree = "<group>"; };
+		3D3FCEED1B67609700C76DA7 /* LJLAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLAllViewController.h; sourceTree = "<group>"; };
+		3D3FCEEE1B67609700C76DA7 /* LJLAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLAllViewController.m; sourceTree = "<group>"; };
+		3D3FCEF31B6760CC00C76DA7 /* LJLVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLVideoViewController.h; sourceTree = "<group>"; };
+		3D3FCEF41B6760CC00C76DA7 /* LJLVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLVideoViewController.m; sourceTree = "<group>"; };
+		3D3FCEF61B6760E500C76DA7 /* LJLVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLVoiceViewController.h; sourceTree = "<group>"; };
+		3D3FCEF71B6760E500C76DA7 /* LJLVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLVoiceViewController.m; sourceTree = "<group>"; };
+		3D3FCEF91B67615800C76DA7 /* LJLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPictureViewController.h; sourceTree = "<group>"; };
+		3D3FCEFA1B67615800C76DA7 /* LJLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPictureViewController.m; sourceTree = "<group>"; };
+		3D3FCEFC1B67618B00C76DA7 /* LJLWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLWordViewController.h; sourceTree = "<group>"; };
+		3D3FCEFD1B67618B00C76DA7 /* LJLWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLWordViewController.m; sourceTree = "<group>"; };
 		3D4317761B5FF41600D17883 /* LJLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLEssenceViewController.h; sourceTree = "<group>"; };
 		3D4317771B5FF41600D17883 /* LJLEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLEssenceViewController.m; sourceTree = "<group>"; };
 		3D43177C1B5FF41600D17883 /* LJLFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -103,6 +119,8 @@
 		3D683FEB1B64FD860098EC71 /* LJLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		3D683FEE1B6503B90098EC71 /* LJLVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLVerticalButton.h; sourceTree = "<group>"; };
 		3D683FEF1B6503B90098EC71 /* LJLVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLVerticalButton.m; sourceTree = "<group>"; };
+		3D8A5F341B68F303009FF2C0 /* LJLTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLTopic.h; sourceTree = "<group>"; };
+		3D8A5F351B68F303009FF2C0 /* LJLTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLTopic.m; sourceTree = "<group>"; };
 		3D8EEB511B662EFB00134ECB /* LJLPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPushGuideView.h; sourceTree = "<group>"; };
 		3D8EEB521B662EFB00134ECB /* LJLPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPushGuideView.m; sourceTree = "<group>"; };
 		3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLPushGuideView.xib; sourceTree = "<group>"; };
@@ -167,6 +185,16 @@
 				3D4317771B5FF41600D17883 /* LJLEssenceViewController.m */,
 				3DFA0B081B63884D003FE085 /* LJLRecommendTagsViewController.h */,
 				3DFA0B091B63884D003FE085 /* LJLRecommendTagsViewController.m */,
+				3D3FCEED1B67609700C76DA7 /* LJLAllViewController.h */,
+				3D3FCEEE1B67609700C76DA7 /* LJLAllViewController.m */,
+				3D3FCEF31B6760CC00C76DA7 /* LJLVideoViewController.h */,
+				3D3FCEF41B6760CC00C76DA7 /* LJLVideoViewController.m */,
+				3D3FCEF61B6760E500C76DA7 /* LJLVoiceViewController.h */,
+				3D3FCEF71B6760E500C76DA7 /* LJLVoiceViewController.m */,
+				3D3FCEF91B67615800C76DA7 /* LJLPictureViewController.h */,
+				3D3FCEFA1B67615800C76DA7 /* LJLPictureViewController.m */,
+				3D3FCEFC1B67618B00C76DA7 /* LJLWordViewController.h */,
+				3D3FCEFD1B67618B00C76DA7 /* LJLWordViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -176,6 +204,8 @@
 			children = (
 				3DFA0B0B1B638B45003FE085 /* LJLRecommendTag.h */,
 				3DFA0B0C1B638B45003FE085 /* LJLRecommendTag.m */,
+				3D8A5F341B68F303009FF2C0 /* LJLTopic.h */,
+				3D8A5F351B68F303009FF2C0 /* LJLTopic.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -581,20 +611,26 @@
 				3D3B04061B624EEE002CC74E /* LJLRecommendCategoryCell.m in Sources */,
 				3D43179D1B5FF41600D17883 /* LJLFriendTrendsViewController.m in Sources */,
 				3D8EEB531B662EFB00134ECB /* LJLPushGuideView.m in Sources */,
+				3D3FCEF51B6760CC00C76DA7 /* LJLVideoViewController.m in Sources */,
 				3D4317A21B5FF41600D17883 /* UIView+LJLExtension.m in Sources */,
 				3DA244421B654D3100DA1931 /* LJLTextField.m in Sources */,
 				3D4317A11B5FF41600D17883 /* UIBarButtonItem+LJLExtension.m in Sources */,
 				3DFA0B0D1B638B45003FE085 /* LJLRecommendTag.m in Sources */,
 				3D46DE171B62897500B5265A /* LJLRecommendUser.m in Sources */,
 				3D4317A51B5FF41600D17883 /* LJLTabBar.m in Sources */,
+				3D3FCEF81B6760E500C76DA7 /* LJLVoiceViewController.m in Sources */,
 				3D43179E1B5FF41600D17883 /* LJLMeViewController.m in Sources */,
+				3D3FCEFB1B67615800C76DA7 /* LJLPictureViewController.m in Sources */,
+				3D3FCEFE1B67618B00C76DA7 /* LJLWordViewController.m in Sources */,
 				3D4317A41B5FF41600D17883 /* main.m in Sources */,
 				3D4317A81B5FF7DF00D17883 /* LJLNavigationController.m in Sources */,
 				3D4317AE1B6005CD00D17883 /* LJLRecommendViewController.m in Sources */,
 				3D4317A01B5FF41600D17883 /* AppDelegate.m in Sources */,
+				3D3FCEEF1B67609700C76DA7 /* LJLAllViewController.m in Sources */,
 				3D683FF01B6503B90098EC71 /* LJLVerticalButton.m in Sources */,
 				3D46DE1B1B628BBF00B5265A /* LJLRecommendUserCell.m in Sources */,
 				3DFA0B0A1B63884D003FE085 /* LJLRecommendTagsViewController.m in Sources */,
+				3D8A5F361B68F303009FF2C0 /* LJLTopic.m in Sources */,
 				3D3F73821B61CF9E00EE1549 /* LJLRecommendCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

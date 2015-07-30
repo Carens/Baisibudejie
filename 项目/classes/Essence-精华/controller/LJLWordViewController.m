@@ -13,6 +13,7 @@
 #import <MJExtension.h>
 
 #import "LJLTopic.h"
+#import "LJLTopicCell.h"
 
 @interface LJLWordViewController ()
 
@@ -39,8 +40,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置tableView的内边距
+    [self setupTableView];
     //添加刷新控件
     [self setupRefresh];
+    
+    
+}
+static NSString * const LJLTopicCellID = @"topic";
+- (void)setupTableView
+{
+    //设置tableview的内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = LJLTitilesViewH + LJLTitilesViewY;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    
+    //设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    //取消分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJLTopicCell class]) bundle:nil] forCellReuseIdentifier:LJLTopicCellID];
 }
 
 - (void)setupRefresh
@@ -149,21 +171,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    LJLTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:LJLTopicCellID];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    LJLTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    cell.topic =self.topics[indexPath.row];
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
+}
 
 @end

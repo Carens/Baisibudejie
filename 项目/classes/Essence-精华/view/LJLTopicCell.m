@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 //评论
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+//sinaV
+@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 
 @end
 
@@ -40,8 +42,8 @@
 
 - (void)setTopic:(LJLTopic *)topic
 {
+    self.sinaVView.hidden = !topic.isSina_v;
     _topic = topic;
-    
     //设置其他控件
     //图片
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];

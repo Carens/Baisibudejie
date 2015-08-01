@@ -10,6 +10,7 @@
 #import "LJLTopic.h"
 #import <UIImageView+WebCache.h>
 #import "LJLProgressView.h"
+#import <SVProgressHUD.h>
 
 @interface LJLShowPictureViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -65,5 +66,23 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)save:(id)sender {
+    
+    if(self.imageView.image == nil){
+        [SVProgressHUD showErrorWithStatus:@"图片没有下载完毕"];
+        return;
+    }
+    
+    //将图片写入相册
+    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
 
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        [SVProgressHUD showErrorWithStatus:@"保存失败!"];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
+    }
+}
 @end

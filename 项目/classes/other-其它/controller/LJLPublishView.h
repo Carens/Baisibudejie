@@ -10,6 +10,6 @@
 
 @interface LJLPublishView : UIView
 
-+ (instancetype)publishView;
++ (void)show;
 
 @end

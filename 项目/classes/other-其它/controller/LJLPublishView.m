@@ -21,6 +21,19 @@ static CGFloat const LJLSpringFactor = 10;
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
+static UIWindow *window_;
++ (void)show
+{
+    window_ = [[UIWindow alloc] init];
+    window_.frame = [UIScreen mainScreen].bounds;
+    window_.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+    window_.hidden = NO;
+    
+    LJLPublishView *publishView = [LJLPublishView publishView];
+    publishView.frame = window_.bounds;
+    [window_ addSubview:publishView];
+}
+
 - (void)awakeFromNib {
     // 不能被点击
     LJLRootView.userInteractionEnabled = NO;
@@ -136,8 +149,8 @@ static CGFloat const LJLSpringFactor = 10;
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
                 LJLRootView.userInteractionEnabled = YES;
                 
-                [self removeFromSuperview];
-                
+//                [self removeFromSuperview];
+                window_ = nil;
                 // 执行传进来的completionBlock参数
                 !completionBlock ? : completionBlock();
             }];

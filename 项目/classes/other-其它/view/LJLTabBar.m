@@ -35,11 +35,14 @@
 - (void)publishClick
 {
     //创建publishView
-    LJLPublishView *publishView = [LJLPublishView publishView];
-    //获得强奸主窗口
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    publishView.frame = window.bounds;
-    [window addSubview:publishView];
+//    LJLPublishView *publishView = [LJLPublishView publishView];
+//    //获得强奸主窗口
+//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//    publishView.frame = window.bounds;
+//    [window addSubview:publishView];
+    
+    //通过创建新的窗口添加并显示publishView
+    [LJLPublishView show];
 }
 
 - (void)layoutSubviews

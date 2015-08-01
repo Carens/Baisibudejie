@@ -7,6 +7,7 @@
 //
 
 #import "LJLTabBar.h"
+#import "LJLPublishView.h"
 
 @interface LJLTabBar()
 
@@ -24,10 +25,21 @@
     [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
     [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         publishButton.size = publishButton.currentBackgroundImage.size;
+        [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:publishButton];
     self.publishButton = publishButton;
     }
     return self;
+}
+
+- (void)publishClick
+{
+    //创建publishView
+    LJLPublishView *publishView = [LJLPublishView publishView];
+    //获得强奸主窗口
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    publishView.frame = window.bounds;
+    [window addSubview:publishView];
 }
 
 - (void)layoutSubviews

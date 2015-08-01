@@ -8,7 +8,7 @@
 
 #import "UIView+LJLExtension.h"
 
-@implementation UIView (XMGExtension)
+@implementation UIView (LJLExtension)
 
 - (void)setCenterX:(CGFloat)centerX
 {

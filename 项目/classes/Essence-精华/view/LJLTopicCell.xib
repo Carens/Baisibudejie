@@ -26,7 +26,7 @@
                             <constraint firstAttribute="width" constant="100" id="j1b-pq-in1"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
@@ -43,7 +43,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHz-Bt-D6S">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHz-Bt-D6S" userLabel="按钮">
                         <rect key="frame" x="291" y="10" width="19" height="29"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="19" id="ZhR-lE-jea"/>
@@ -65,6 +65,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nm-uY-ECr" userLabel="顶">
                                 <rect key="frame" x="0.0" y="1" width="80" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="545" image="mainCellDing">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,7 +75,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-13-XSS" userLabel="踩">
                                 <rect key="frame" x="80" y="1" width="80" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="  545" image="mainCellCai">
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="545" image="mainCellCai">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -83,6 +85,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUS-WC-3zQ" userLabel="分享">
                                 <rect key="frame" x="160" y="1" width="80" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="545" image="mainCellShare">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,6 +95,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl3-eb-WMv" userLabel="评论">
                                 <rect key="frame" x="240" y="1" width="80" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="545" image="mainCellComment">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,17 +170,26 @@
                             <constraint firstAttribute="height" constant="14" id="grg-4R-tYV"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asd-cV-Kf7">
+                        <rect key="frame" x="10" y="55" width="300" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Sev-Ch-WLT" firstAttribute="bottom" secondItem="Kvh-1L-RfD" secondAttribute="bottom" id="2lT-6a-4fh"/>
                     <constraint firstItem="Kvh-1L-RfD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5fm-Rq-nbZ"/>
+                    <constraint firstItem="asd-cV-Kf7" firstAttribute="trailing" secondItem="yHz-Bt-D6S" secondAttribute="trailing" id="7Nl-k6-zbK"/>
                     <constraint firstAttribute="bottom" secondItem="ibY-k3-eU5" secondAttribute="bottom" id="8Yd-Au-zPv"/>
                     <constraint firstItem="yHz-Bt-D6S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ANz-fS-85x"/>
                     <constraint firstItem="6w2-3h-L4C" firstAttribute="leading" secondItem="Kvh-1L-RfD" secondAttribute="trailing" constant="13" id="CCq-1b-IRr"/>
                     <constraint firstItem="ibY-k3-eU5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DF5-o7-ohX"/>
+                    <constraint firstItem="asd-cV-Kf7" firstAttribute="top" secondItem="Kvh-1L-RfD" secondAttribute="bottom" constant="10" id="FFt-H7-vD6"/>
                     <constraint firstItem="yHz-Bt-D6S" firstAttribute="leading" secondItem="6w2-3h-L4C" secondAttribute="trailing" constant="20" id="JWs-E6-WxN"/>
                     <constraint firstItem="YJ0-or-gu1" firstAttribute="bottom" secondItem="Kvh-1L-RfD" secondAttribute="bottom" constant="5" id="aLU-vK-mIL"/>
                     <constraint firstAttribute="trailing" secondItem="ibY-k3-eU5" secondAttribute="trailing" id="cq1-vn-I7o"/>
+                    <constraint firstItem="asd-cV-Kf7" firstAttribute="leading" secondItem="Kvh-1L-RfD" secondAttribute="leading" id="gKR-QB-fFJ"/>
                     <constraint firstItem="YJ0-or-gu1" firstAttribute="trailing" secondItem="Kvh-1L-RfD" secondAttribute="trailing" constant="5" id="hBk-eH-m61"/>
                     <constraint firstItem="Kvh-1L-RfD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="n2M-UU-p1Y"/>
                     <constraint firstItem="6w2-3h-L4C" firstAttribute="leading" secondItem="Sev-Ch-WLT" secondAttribute="leading" id="odI-HQ-aMu"/>
@@ -193,8 +206,9 @@
                 <outlet property="profileImageView" destination="Kvh-1L-RfD" id="4RV-rj-jGO"/>
                 <outlet property="shareButton" destination="KUS-WC-3zQ" id="Jtf-vf-rml"/>
                 <outlet property="sinaVView" destination="YJ0-or-gu1" id="Mf9-0y-1Xa"/>
+                <outlet property="text_Label" destination="asd-cV-Kf7" id="vi0-VM-nBY"/>
             </connections>
-            <point key="canvasLocation" x="233" y="213"/>
+            <point key="canvasLocation" x="213" y="214"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -9,6 +9,20 @@
 #import "LJLTopic.h"
 
 @implementation LJLTopic
+{
+    CGFloat _cellHeight;
+    CGRect _pictureF;
+}
+
+//通过运行时转换
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
+}
 
 //重写创建时间的get方法
 - (NSString *)create_time
@@ -45,5 +59,48 @@
 }
 
 }
+
+- (CGFloat)cellHeight
+{
+    if(!_cellHeight){
+        //文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJLTopicCellMargin , MAXFLOAT);
+        //文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+       
+        //文字部分的高度
+        _cellHeight = LJLTopicCellTextY + textH + LJLTopicCellMargin;
+        
+        //根据中间类型计算cell中间部分
+        if(self.type == LJLTopicTypePicture){//图片帖子
+            
+            //图片显示出来的最大的宽度
+            CGFloat pictureW = maxSize.width;
+            //图片显示出来的最大高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+//            判断是否是大图
+            if( pictureH >= LJLTopicCellPictureMaxH ){
+                pictureH = LJLTopicCellPictureBreakH;
+                self.bigPicture = YES;
+            }
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = LJLTopicCellMargin;
+            CGFloat pictureY = LJLTopicCellTextY + textH + LJLTopicCellMargin;
+
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            //图片的高度
+            _cellHeight += pictureH + LJLTopicCellMargin;
+        }else if(self.type == LJLTopicTypeVoice){//声音帖子
+            
+        }
+        
+        //底部工具条的高度
+        _cellHeight += LJLTopicCellBottomBarH + LJLTopicCellMargin;
+    }
+    return _cellHeight;
+}
+
 
 @end

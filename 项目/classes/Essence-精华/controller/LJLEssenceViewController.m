@@ -8,11 +8,7 @@
 
 #import "LJLEssenceViewController.h"
 #import "LJLRecommendTagsViewController.h"
-#import "LJLAllViewController.h"
-#import "LJLVideoViewController.h"
-#import "LJLVoiceViewController.h"
-#import "LJLPictureViewController.h"
-#import "LJLWordViewController.h"
+#import "LJLTopicViewController.h"
 
 
 @interface LJLEssenceViewController () <UIScrollViewDelegate>
@@ -52,19 +48,29 @@
 - (void)setupAllChildViewControllers
 {
     
-    LJLAllViewController *all = [[LJLAllViewController alloc] init];
+    LJLTopicViewController *all = [[LJLTopicViewController alloc] init];
+    all.title = @"全部";
+    all.type = LJLTopicTypeAll;
     [self addChildViewController:all];
     
-    LJLVideoViewController *video = [[LJLVideoViewController alloc] init];
+    LJLTopicViewController *video = [[LJLTopicViewController alloc] init];
+    video.title = @"视频";
+    video.type = LJLTopicTypeVideo;
     [self addChildViewController:video];
     
-    LJLVoiceViewController *voice = [[LJLVoiceViewController alloc] init];
+    LJLTopicViewController *voice = [[LJLTopicViewController alloc] init];
+    voice.title = @"声音";
+    voice.type = LJLTopicTypeVoice;
     [self addChildViewController:voice];
     
-    LJLPictureViewController *picture = [[LJLPictureViewController alloc] init];
+    LJLTopicViewController *picture = [[LJLTopicViewController alloc] init];
+    picture.title = @"图片";
+    picture.type = LJLTopicTypePicture;
     [self addChildViewController:picture];
     
-    LJLWordViewController *word = [[LJLWordViewController alloc] init];
+    LJLTopicViewController *word = [[LJLTopicViewController alloc] init];
+    word.title = @"段子";
+    word.type = LJLTopicTypeWord;
     [self addChildViewController:word];
     
 }
@@ -91,19 +97,21 @@
     
     
     //在标签中添加按钮
-    NSArray *titles = @[@"全部全部",@"视频",@"声音",@"图片",@"段子"];
+//    NSArray *titles = @[@"全部全部",@"视频",@"声音",@"图片",@"段子"];
     
-    CGFloat width = self.view.width / titles.count;
+    CGFloat width = self.view.width / self.childViewControllers.count;
     CGFloat height = titlesView.height;
     
-    for(NSInteger i = 0; i < titles.count; i++){
+    for(NSInteger i = 0; i < self.childViewControllers.count; i++){
         UIButton *button = [[UIButton alloc] init];
         button.width = width;
         button.height = height;
         button.tag = i;
         button.x = i * width;
+        //设置按钮标题
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
         
-        [button setTitle:titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         //enable = NO;的状态
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
@@ -132,8 +140,6 @@
     self.selectedButton.enabled = YES;
     button.enabled = NO;
     self.selectedButton = button;
-    
-    LJLLog(@"------");
     
     [UIView animateWithDuration:0.2 animations:^{
         self.indicatorView.width = button.titleLabel.width;
@@ -188,7 +194,6 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     //取出子控制器
     UITableViewController *vc = self.childViewControllers[index];
-    NSLog(@"%@",vc);
     vc.view.x = scrollView.contentOffset.x;
     // 设置控制器view的y值为0(默认是20)
     vc.view.y = 0;

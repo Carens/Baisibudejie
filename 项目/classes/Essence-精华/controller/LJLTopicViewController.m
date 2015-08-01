@@ -6,7 +6,7 @@
 //
 //
 
-#import "LJLWordViewController.h"
+#import "LJLTopicViewController.h"
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
@@ -15,7 +15,7 @@
 #import "LJLTopic.h"
 #import "LJLTopicCell.h"
 
-@interface LJLWordViewController ()
+@interface LJLTopicViewController ()
 
 //帖子数据
 @property (nonatomic,strong) NSMutableArray *topics;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation LJLWordViewController
+@implementation LJLTopicViewController
 
 - (NSMutableArray *)topics
 {
@@ -86,7 +86,7 @@ static NSString * const LJLTopicCellID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     
     self.params = params;
     
@@ -128,7 +128,7 @@ static NSString * const LJLTopicCellID = @"topic";
     NSMutableDictionary  *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
@@ -181,7 +181,9 @@ static NSString * const LJLTopicCellID = @"topic";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    LJLTopic *topic = self.topics[indexPath.row];
+
+     return topic.cellHeight;
 }
 
 @end

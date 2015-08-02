@@ -10,6 +10,8 @@
 #import <UIImageView+WebCache.h>
 #import "LJLTopic.h"
 #import "LJLTopicPictureView.h"
+#import "LJLVoiceView.h"
+#import "LJLVideoView.h"
 
 @interface LJLTopicCell ()
 
@@ -33,10 +35,33 @@
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
 //帖子中间的pictureView
 @property (nonatomic,weak) LJLTopicPictureView *pictureView;
-
+//帖子中间的voiceView
+@property (nonatomic,weak) LJLVoiceView *voiceView;
+//帖子中间的VideoView
+@property (nonatomic,weak) LJLVideoView *videoView;
 @end
 
 @implementation LJLTopicCell
+
+- (LJLVideoView *)videoView
+{
+    if(!_videoView){
+        LJLVideoView *videoView = [LJLVideoView video];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
+
+- (LJLVoiceView *)voiceView
+{
+    if(!_voiceView){
+       LJLVoiceView *voiceView = [LJLVoiceView voice];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
 
 - (LJLTopicPictureView *)pictureView
 {
@@ -73,11 +98,26 @@
     
     //根据模型类型(帖子类型)添加对应的内容到cell的中间
     if(topic.type == LJLTopicTypePicture){//图片帖子
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
+        
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     } else if (topic.type == LJLTopicTypeVoice) { // 声音帖子
-        //        self.voiceView.topic = topic;
-        //        self.voiceView.frame = topic.voiceF;
+        self.voiceView.hidden = NO;
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
+        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if(topic.type == LJLTopicTypeVideo){//视频帖子
+        self.voiceView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
     
 }

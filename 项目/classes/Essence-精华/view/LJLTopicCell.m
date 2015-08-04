@@ -80,6 +80,11 @@
     return _pictureView;
 }
 
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 - (void)awakeFromNib {
     
     UIImageView *bgView = [[UIImageView alloc] init];

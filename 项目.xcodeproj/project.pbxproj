@@ -42,6 +42,8 @@
 		3D4A98FE1B6D248B006731E0 /* LJLPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A98FD1B6D248B006731E0 /* LJLPublishView.xib */; };
 		3D4B3EBA1B704F0A00153351 /* LJLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EB91B704F0A00153351 /* LJLUser.m */; };
 		3D4B3EBD1B704F5E00153351 /* LJLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EBC1B704F5E00153351 /* LJLComment.m */; };
+		3D4B3EC11B705D0300153351 /* LJLCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EBF1B705D0300153351 /* LJLCommentViewController.m */; };
+		3D4B3EC21B705D0300153351 /* LJLCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4B3EC01B705D0300153351 /* LJLCommentViewController.xib */; };
 		3D5530081B5F449E005EDA84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5530071B5F449E005EDA84 /* Images.xcassets */; };
 		3D5530171B5F449E005EDA84 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5530161B5F449E005EDA84 /* __Tests.m */; };
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
@@ -132,6 +134,9 @@
 		3D4B3EB91B704F0A00153351 /* LJLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLUser.m; sourceTree = "<group>"; };
 		3D4B3EBB1B704F5E00153351 /* LJLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLComment.h; sourceTree = "<group>"; };
 		3D4B3EBC1B704F5E00153351 /* LJLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLComment.m; sourceTree = "<group>"; };
+		3D4B3EBE1B705D0300153351 /* LJLCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLCommentViewController.h; sourceTree = "<group>"; };
+		3D4B3EBF1B705D0300153351 /* LJLCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLCommentViewController.m; sourceTree = "<group>"; };
+		3D4B3EC01B705D0300153351 /* LJLCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLCommentViewController.xib; sourceTree = "<group>"; };
 		3D552FF71B5F449E005EDA84 /* 项目.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "项目.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D552FFB1B5F449E005EDA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D5530071B5F449E005EDA84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -223,6 +228,9 @@
 				3D7C76441B6C9F7D008E752B /* LJLShowPictureViewController.h */,
 				3D7C76451B6C9F7D008E752B /* LJLShowPictureViewController.m */,
 				3D7C76461B6C9F7D008E752B /* LJLShowPictureViewController.xib */,
+				3D4B3EBE1B705D0300153351 /* LJLCommentViewController.h */,
+				3D4B3EBF1B705D0300153351 /* LJLCommentViewController.m */,
+				3D4B3EC01B705D0300153351 /* LJLCommentViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -607,6 +615,7 @@
 				3D44B3211B6E697A00FB0E65 /* LJLVideoView.xib in Resources */,
 				3D3FFACE1B692741000E7275 /* LJLTopicCell.xib in Resources */,
 				3D48180A1B6B60FC00CF3B13 /* LJLTopicPictureView.xib in Resources */,
+				3D4B3EC21B705D0300153351 /* LJLCommentViewController.xib in Resources */,
 				3D46DE1C1B628BBF00B5265A /* LJLRecommendUserCell.xib in Resources */,
 				3D4317AF1B6005CD00D17883 /* LJLRecommendViewController.xib in Resources */,
 				3D3B04071B624EEE002CC74E /* LJLRecommendCategoryCell.xib in Resources */,
@@ -680,6 +689,7 @@
 				3DB0F02A1B6A904900646048 /* LJLTopicViewController.m in Sources */,
 				3D3FFAD11B693B31000E7275 /* LJLConst.m in Sources */,
 				3D46DE171B62897500B5265A /* LJLRecommendUser.m in Sources */,
+				3D4B3EC11B705D0300153351 /* LJLCommentViewController.m in Sources */,
 				3D7C76431B6C9CED008E752B /* LJLProgressView.m in Sources */,
 				3D4317A51B5FF41600D17883 /* LJLTabBar.m in Sources */,
 				3D43179E1B5FF41600D17883 /* LJLMeViewController.m in Sources */,

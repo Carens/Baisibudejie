@@ -14,6 +14,7 @@
 
 #import "LJLTopic.h"
 #import "LJLTopicCell.h"
+#import "LJLCommentViewController.h"
 
 @interface LJLTopicViewController ()
 
@@ -184,6 +185,14 @@ static NSString * const LJLTopicCellID = @"topic";
     LJLTopic *topic = self.topics[indexPath.row];
 
      return topic.cellHeight;
+}
+
+#pragma mark - 代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LJLCommentViewController *comment = [[LJLCommentViewController alloc] init];
+    comment.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:comment animated:YES];
 }
 
 @end

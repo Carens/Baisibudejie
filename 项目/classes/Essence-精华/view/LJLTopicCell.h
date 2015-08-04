@@ -15,4 +15,6 @@
 /** 段子模型 */
 @property (nonatomic,strong) LJLTopic *topic;
 
++ (instancetype)cell;
+
 @end

@@ -23,6 +23,13 @@
 
 @implementation LJLCommentCell
 
+- (void)awakeFromNib
+{
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+}
+
 - (void)setComment:(LJLComment *)comment
 {
     _comment = comment;
@@ -40,5 +47,12 @@
         self.voiceButton.hidden = YES;
     }
 }
+
+//- (void)setFrame:(CGRect)frame
+//{
+//    frame.origin.x = LJLTopicCellMargin;
+//    frame.size.width -= 2 * LJLTopicCellMargin;
+//    [super setFrame:frame];
+//}
 
 @end

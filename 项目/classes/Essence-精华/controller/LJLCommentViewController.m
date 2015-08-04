@@ -33,9 +33,23 @@ static NSString * const LJLCommentId = @"comment";
 /** 保存帖子 */
 @property (nonatomic, strong) LJLComment *saved_top_cmt;
 
+/** 保存当前的页码 */
+@property (nonatomic, assign) NSInteger page;
+
+/** 管理者 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
+
 @end
 
 @implementation LJLCommentViewController
+
+- (AFHTTPSessionManager *)manager
+{
+    if(!_manager){
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 
 - (void)viewDidLoad {
@@ -53,10 +67,50 @@ static NSString * const LJLCommentId = @"comment";
 {
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.header beginRefreshing];
+    
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
+//    self.tableView.footer.hidden = YES;
 }
-
+//加载更多数据
+- (void)loadMoreComments
+{
+    //结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    NSInteger page = self.page + 1;
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"page"] = @(page);
+    LJLComment *cmt = [self.latestComments lastObject];
+    params[@"lastcid"] = cmt.ID;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSArray *newArray = [LJLComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [self.latestComments addObjectsFromArray:newArray];
+        
+        self.page = page;
+        
+        [self.tableView reloadData];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if(self.latestComments.count >= total){
+            self.tableView.footer.hidden = YES;
+        }else{
+            [self.tableView.footer endRefreshing];
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.tableView.footer endRefreshing];
+    }];
+    
+}
 - (void)loadNewComments
 {
+    //结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     //请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
@@ -73,6 +127,11 @@ static NSString * const LJLCommentId = @"comment";
         
         [self.tableView.header endRefreshing];
         
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) { // 全部加载完毕
+            self.tableView.footer.hidden = YES;
+        }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.tableView.header endRefreshing];
     }];
@@ -119,6 +178,11 @@ static NSString * const LJLCommentId = @"comment";
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJLCommentCell class]) bundle:nil] forCellReuseIdentifier:LJLCommentId];
+    
+    //去掉分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, LJLTopicCellMargin, 0);
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note
@@ -146,6 +210,9 @@ static NSString * const LJLCommentId = @"comment";
     }
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    //取消所有任务
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 #pragma mark - <UITableViewDelegate>

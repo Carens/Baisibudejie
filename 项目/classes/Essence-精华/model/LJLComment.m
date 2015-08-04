@@ -11,6 +11,9 @@
 
 @implementation LJLComment
 
-
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+}
 
 @end

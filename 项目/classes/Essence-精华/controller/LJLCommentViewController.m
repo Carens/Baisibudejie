@@ -69,7 +69,7 @@ static NSString * const LJLCommentId = @"comment";
     [self.tableView.header beginRefreshing];
     
     self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
-//    self.tableView.footer.hidden = YES;
+    self.tableView.footer.hidden = YES;
 }
 //加载更多数据
 - (void)loadMoreComments
@@ -251,6 +251,10 @@ static NSString * const LJLCommentId = @"comment";
 {
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
+    
+    // 隐藏尾部控件
+    tableView.footer.hidden = (latestCount == 0);
+    
     if(section == 0){
         return hotCount ? hotCount : latestCount;
     }

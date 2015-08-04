@@ -28,6 +28,9 @@
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
 
+/** 保存帖子 */
+@property (nonatomic, strong) NSArray *saved_top_cmt;
+
 @end
 
 @implementation LJLCommentViewController
@@ -75,6 +78,14 @@
 {
     UIView *header = [[UIView alloc] init];
     
+    // 清空top_cmt
+    if (self.topic.top_cmt.count) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
+    
     LJLTopicCell *cell = [LJLTopicCell cell];
     cell.topic = self.topic;
     cell.size = CGSizeMake(LJLScreenW, self.topic.cellHeight);
@@ -114,6 +125,12 @@
 
 - (void)dealloc
 {
+    // 清空top_cmt
+    if (self.topic.top_cmt.count) {
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

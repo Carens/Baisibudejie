@@ -12,6 +12,7 @@
 		3D179DB81B6E3AE700C67042 /* LJLVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D179DB71B6E3AE700C67042 /* LJLVoiceView.xib */; };
 		3D3B04061B624EEE002CC74E /* LJLRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B04041B624EEE002CC74E /* LJLRecommendCategoryCell.m */; };
 		3D3B04071B624EEE002CC74E /* LJLRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D3B04051B624EEE002CC74E /* LJLRecommendCategoryCell.xib */; };
+		3D3EB81C1B710E5A00810A05 /* LJLTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3EB81B1B710E5A00810A05 /* LJLTopWindow.m */; };
 		3D3F73821B61CF9E00EE1549 /* LJLRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F73811B61CF9E00EE1549 /* LJLRecommendCategory.m */; };
 		3D3FFACD1B692741000E7275 /* LJLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3FFACB1B692741000E7275 /* LJLTopicCell.m */; };
 		3D3FFACE1B692741000E7275 /* LJLTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D3FFACC1B692741000E7275 /* LJLTopicCell.xib */; };
@@ -85,6 +86,8 @@
 		3D3B04031B624EEE002CC74E /* LJLRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLRecommendCategoryCell.h; sourceTree = "<group>"; };
 		3D3B04041B624EEE002CC74E /* LJLRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLRecommendCategoryCell.m; sourceTree = "<group>"; };
 		3D3B04051B624EEE002CC74E /* LJLRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		3D3EB81A1B710E5A00810A05 /* LJLTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLTopWindow.h; sourceTree = "<group>"; };
+		3D3EB81B1B710E5A00810A05 /* LJLTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLTopWindow.m; sourceTree = "<group>"; };
 		3D3F73801B61CF9E00EE1549 /* LJLRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLRecommendCategory.h; sourceTree = "<group>"; };
 		3D3F73811B61CF9E00EE1549 /* LJLRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLRecommendCategory.m; sourceTree = "<group>"; };
 		3D3FFACA1B692741000E7275 /* LJLTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLTopicCell.h; sourceTree = "<group>"; };
@@ -459,6 +462,8 @@
 				3D8EEB511B662EFB00134ECB /* LJLPushGuideView.h */,
 				3D8EEB521B662EFB00134ECB /* LJLPushGuideView.m */,
 				3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */,
+				3D3EB81A1B710E5A00810A05 /* LJLTopWindow.h */,
+				3D3EB81B1B710E5A00810A05 /* LJLTopWindow.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -707,6 +712,7 @@
 				3D7C76431B6C9CED008E752B /* LJLProgressView.m in Sources */,
 				3D4317A51B5FF41600D17883 /* LJLTabBar.m in Sources */,
 				3D43179E1B5FF41600D17883 /* LJLMeViewController.m in Sources */,
+				3D3EB81C1B710E5A00810A05 /* LJLTopWindow.m in Sources */,
 				3D4B3EBD1B704F5E00153351 /* LJLComment.m in Sources */,
 				3D4650E91B70B7E100C38DF0 /* LJLCommentCell.m in Sources */,
 				3D4A98FC1B6D246B006731E0 /* LJLPublishView.m in Sources */,

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LJLTabBarViewController.h"
 #import "LJLPushGuideView.h"
+#import "LJLTopWindow.h"
 
 @interface AppDelegate ()
 
@@ -49,6 +50,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
+    [LJLTopWindow show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

@@ -10,12 +10,14 @@
 #import "LJLTopicCell.h"
 #import "LJLTopic.h"
 #import "LJLComment.h"
+#import "LJLCommentHeaderView.h"
+#import "LJLCommentCell.h"
 
 #import <MJRefresh.h>
 #import <MJExtension.h>
 #import <AFNetworking.h>
 
-
+static NSString * const LJLCommentId = @"comment";
 
 @interface LJLCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 //底部工具条约束
@@ -29,11 +31,12 @@
 @property (nonatomic, strong) NSMutableArray *latestComments;
 
 /** 保存帖子 */
-@property (nonatomic, strong) NSArray *saved_top_cmt;
+@property (nonatomic, strong) LJLComment *saved_top_cmt;
 
 @end
 
 @implementation LJLCommentViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -79,7 +82,7 @@
     UIView *header = [[UIView alloc] init];
     
     // 清空top_cmt
-    if (self.topic.top_cmt.count) {
+    if (self.topic.top_cmt) {
         self.saved_top_cmt = self.topic.top_cmt;
         self.topic.top_cmt = nil;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
@@ -102,9 +105,20 @@
     self.title = @"评论";
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:nil action:nil];
     
+    //添加监听键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    //设置CommentCell的高度
+    //估计高度
+    self.tableView.estimatedRowHeight = 44;
+    //自动计算高度
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    //背景颜色
     self.tableView.backgroundColor = LJLGlobalBg;
+    
+    //注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJLCommentCell class]) bundle:nil] forCellReuseIdentifier:LJLCommentId];
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note
@@ -126,7 +140,7 @@
 - (void)dealloc
 {
     // 清空top_cmt
-    if (self.topic.top_cmt.count) {
+    if (self.topic.top_cmt) {
         self.topic.top_cmt = self.saved_top_cmt;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
@@ -176,23 +190,24 @@
     return latestCount;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    //先从缓冲池中找
+    LJLCommentHeaderView *header = [LJLCommentHeaderView headerViewWithTableView:tableView];
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
-        return hotCount ? @"最热评论" : @"最新评论";
+        header.title = hotCount ? @"最热评论" : @"最新评论";
+    }else{
+        header.title = @"最新评论";
     }
-    return @"最新评论";
+    return header;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
-    }
-    LJLComment *comment = [self commentInIndexPath:indexPath];
-    cell.textLabel.text = comment.content;
+    LJLCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:LJLCommentId];
+       cell.comment = [self commentInIndexPath:indexPath];
+    
     return cell;
 }
 

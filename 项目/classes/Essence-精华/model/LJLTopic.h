@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class LJLComment;
+
 @interface LJLTopic : NSObject
 /** id */
 @property (nonatomic, copy) NSString *ID;
@@ -48,7 +50,7 @@
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
 /** 最热评论 */
-@property (nonatomic,strong) NSArray *top_cmt;
+@property (nonatomic,strong) LJLComment *top_cmt;
 
 
 /****** 额外的辅助属性 ******/

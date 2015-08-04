@@ -40,6 +40,8 @@
 		3D48180A1B6B60FC00CF3B13 /* LJLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4818091B6B60FC00CF3B13 /* LJLTopicPictureView.xib */; };
 		3D4A98FC1B6D246B006731E0 /* LJLPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A98FB1B6D246B006731E0 /* LJLPublishView.m */; };
 		3D4A98FE1B6D248B006731E0 /* LJLPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A98FD1B6D248B006731E0 /* LJLPublishView.xib */; };
+		3D4B3EBA1B704F0A00153351 /* LJLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EB91B704F0A00153351 /* LJLUser.m */; };
+		3D4B3EBD1B704F5E00153351 /* LJLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EBC1B704F5E00153351 /* LJLComment.m */; };
 		3D5530081B5F449E005EDA84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5530071B5F449E005EDA84 /* Images.xcassets */; };
 		3D5530171B5F449E005EDA84 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5530161B5F449E005EDA84 /* __Tests.m */; };
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
@@ -126,6 +128,10 @@
 		3D4A98FA1B6D246B006731E0 /* LJLPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPublishView.h; sourceTree = "<group>"; };
 		3D4A98FB1B6D246B006731E0 /* LJLPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPublishView.m; sourceTree = "<group>"; };
 		3D4A98FD1B6D248B006731E0 /* LJLPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLPublishView.xib; sourceTree = "<group>"; };
+		3D4B3EB81B704F0A00153351 /* LJLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLUser.h; sourceTree = "<group>"; };
+		3D4B3EB91B704F0A00153351 /* LJLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLUser.m; sourceTree = "<group>"; };
+		3D4B3EBB1B704F5E00153351 /* LJLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLComment.h; sourceTree = "<group>"; };
+		3D4B3EBC1B704F5E00153351 /* LJLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLComment.m; sourceTree = "<group>"; };
 		3D552FF71B5F449E005EDA84 /* 项目.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "项目.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D552FFB1B5F449E005EDA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D5530071B5F449E005EDA84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -228,6 +234,10 @@
 				3DFA0B0C1B638B45003FE085 /* LJLRecommendTag.m */,
 				3D8A5F341B68F303009FF2C0 /* LJLTopic.h */,
 				3D8A5F351B68F303009FF2C0 /* LJLTopic.m */,
+				3D4B3EB81B704F0A00153351 /* LJLUser.h */,
+				3D4B3EB91B704F0A00153351 /* LJLUser.m */,
+				3D4B3EBB1B704F5E00153351 /* LJLComment.h */,
+				3D4B3EBC1B704F5E00153351 /* LJLComment.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -673,9 +683,11 @@
 				3D7C76431B6C9CED008E752B /* LJLProgressView.m in Sources */,
 				3D4317A51B5FF41600D17883 /* LJLTabBar.m in Sources */,
 				3D43179E1B5FF41600D17883 /* LJLMeViewController.m in Sources */,
+				3D4B3EBD1B704F5E00153351 /* LJLComment.m in Sources */,
 				3D4A98FC1B6D246B006731E0 /* LJLPublishView.m in Sources */,
 				3D179DB61B6E3A6C00C67042 /* LJLVoiceView.m in Sources */,
 				3D4317A41B5FF41600D17883 /* main.m in Sources */,
+				3D4B3EBA1B704F0A00153351 /* LJLUser.m in Sources */,
 				3D4317A81B5FF7DF00D17883 /* LJLNavigationController.m in Sources */,
 				3D7C76471B6C9F7D008E752B /* LJLShowPictureViewController.m in Sources */,
 				3D3FFACD1B692741000E7275 /* LJLTopicCell.m in Sources */,

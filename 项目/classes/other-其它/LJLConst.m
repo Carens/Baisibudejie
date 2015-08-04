@@ -14,3 +14,6 @@ CGFloat const LJLTopicCellBottomBarH = 44;
 CGFloat const LJLTopicCellPictureMaxH = 1000;
 /** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
 CGFloat const LJLTopicCellPictureBreakH = 250;
+
+/** 精华-cell-最热评论标题的高度 */
+CGFloat const LJLTopicCellTopCmtTitleH = 20;

@@ -7,6 +7,9 @@
 //
 
 #import "LJLTopic.h"
+#import "LJLComment.h"
+#import "LJLUser.h"
+#import <MJExtension.h>
 
 @implementation LJLTopic
 {
@@ -21,6 +24,13 @@
              @"small_image" : @"image0",
              @"large_image" : @"image1",
              @"middle_image" : @"image2"
+             };
+}
+
++ (NSDictionary *)objectClassInArray
+{
+    return @{
+             @"top_cmt" : @"LJLComment"
              };
 }
 
@@ -113,6 +123,16 @@
             _cellHeight += videoH + LJLTopicCellMargin;
             
             
+        }
+        //如果有最热评论
+        LJLComment *cmt = [self.top_cmt firstObject];
+        if(cmt){
+            NSString *content = [NSString stringWithFormat:@"%@ : %@ ",cmt.user.username,cmt.content];
+            
+            //最热评论内容高度
+            CGFloat comtentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            _cellHeight += LJLTopicCellTopCmtTitleH + comtentH + LJLTopicCellMargin;
         }
         
         //底部工具条的高度

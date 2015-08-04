@@ -12,6 +12,8 @@
 #import "LJLTopicPictureView.h"
 #import "LJLVoiceView.h"
 #import "LJLVideoView.h"
+#import "LJLComment.h"
+#import "LJLUser.h"
 
 @interface LJLTopicCell ()
 
@@ -39,6 +41,11 @@
 @property (nonatomic,weak) LJLVoiceView *voiceView;
 //帖子中间的VideoView
 @property (nonatomic,weak) LJLVideoView *videoView;
+//最热评论控件
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+//评论内容
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+
 @end
 
 @implementation LJLTopicCell
@@ -118,6 +125,19 @@
         
         self.voiceView.hidden = YES;
         self.pictureView.hidden = YES;
+    }else{//段子帖子
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    }
+    
+    
+    LJLComment *cmt = [topic.top_cmt firstObject];
+    if(cmt){
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+    }else{
+        self.topCmtView.hidden = YES;
     }
     
 }
@@ -133,8 +153,7 @@
 }
 
 - (void)setFrame:(CGRect)frame{
-    frame.origin.x = LJLTopicCellMargin;
-    frame.size.width -= 2 * LJLTopicCellMargin;
+
     frame.origin.y += LJLTopicCellMargin;
     frame.size.height -= LJLTopicCellMargin;
     [super setFrame:frame];

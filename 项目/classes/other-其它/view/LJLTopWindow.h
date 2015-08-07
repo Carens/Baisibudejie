@@ -12,4 +12,6 @@
 
 + (void)show;
 
++ (void)hide;
+
 @end

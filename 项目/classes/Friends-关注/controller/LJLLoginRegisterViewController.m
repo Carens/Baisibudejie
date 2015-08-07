@@ -38,15 +38,15 @@
 }
 
 //设置状态栏颜色
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    
-    return UIStatusBarStyleLightContent;
-}
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    
+//    return UIStatusBarStyleLightContent;
+//}
 
 //退出modal 
 - (IBAction)close:(id)sender {
-    
+     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

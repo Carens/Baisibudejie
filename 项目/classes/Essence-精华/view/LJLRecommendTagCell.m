@@ -26,13 +26,18 @@
 @implementation LJLRecommendTagCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    //通过图层改变为圆形头像
+//    self.imageListImageView.layer.cornerRadius = 10;
+//    self.imageListImageView.layer.masksToBounds = YES;
 }
 
 - (void)setTag:(LJLRecommendTag *)Tag
 {
+    
     _Tag = Tag;
-    [self.imageListImageView sd_setImageWithURL:[NSURL URLWithString:Tag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.imageListImageView setHeader:Tag.image_list];
+//    [self.imageListImageView sd_setImageWithURL:[NSURL URLWithString:Tag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
     self.themeNameLabel.text = Tag.theme_name;
     
     NSString *subNumber = nil;

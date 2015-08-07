@@ -23,6 +23,18 @@
 
 @implementation LJLCommentCell
 
+//是否可以成为第一响应者
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+//系统自带的是否弹出
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+
+
 - (void)awakeFromNib
 {
     UIImageView *bgView = [[UIImageView alloc] init];
@@ -34,7 +46,7 @@
 {
     _comment = comment;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setHeader:comment.user.profile_image];
     self.sexView.image = [comment.user.sex isEqualToString:LJLUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = comment.content;
     self.usernameLabel.text = comment.user.username;
@@ -48,11 +60,13 @@
     }
 }
 
-//- (void)setFrame:(CGRect)frame
-//{
-//    frame.origin.x = LJLTopicCellMargin;
-//    frame.size.width -= 2 * LJLTopicCellMargin;
-//    [super setFrame:frame];
-//}
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x = LJLTopicCellMargin;
+    frame.size.width -= 2 * LJLTopicCellMargin;
+    
+    
+    [super setFrame:frame];
+}
 
 @end

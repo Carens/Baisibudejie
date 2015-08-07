@@ -50,6 +50,8 @@
 		3D4B3EC21B705D0300153351 /* LJLCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4B3EC01B705D0300153351 /* LJLCommentViewController.xib */; };
 		3D5530081B5F449E005EDA84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5530071B5F449E005EDA84 /* Images.xcassets */; };
 		3D5530171B5F449E005EDA84 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5530161B5F449E005EDA84 /* __Tests.m */; };
+		3D67554D1B74A96E00051872 /* UIImage+LJLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */; };
+		3D6755501B74A9C800051872 /* UIImageView+LJLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67554F1B74A9C800051872 /* UIImageView+LJLExtension.m */; };
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
 		3D683FED1B64FD860098EC71 /* LJLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D683FEB1B64FD860098EC71 /* LJLLoginRegisterViewController.xib */; };
 		3D683FF01B6503B90098EC71 /* LJLVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEF1B6503B90098EC71 /* LJLVerticalButton.m */; };
@@ -154,6 +156,10 @@
 		3D5530101B5F449E005EDA84 /* 项目Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "项目Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D5530151B5F449E005EDA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D5530161B5F449E005EDA84 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		3D67554B1B74A96E00051872 /* UIImage+LJLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LJLExtension.h"; sourceTree = "<group>"; };
+		3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LJLExtension.m"; sourceTree = "<group>"; };
+		3D67554E1B74A9C800051872 /* UIImageView+LJLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LJLExtension.h"; sourceTree = "<group>"; };
+		3D67554F1B74A9C800051872 /* UIImageView+LJLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LJLExtension.m"; sourceTree = "<group>"; };
 		3D683FE91B64FD860098EC71 /* LJLLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLLoginRegisterViewController.h; sourceTree = "<group>"; };
 		3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLLoginRegisterViewController.m; sourceTree = "<group>"; };
 		3D683FEB1B64FD860098EC71 /* LJLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -436,6 +442,10 @@
 				3D4317931B5FF41600D17883 /* UIView+LJLExtension.m */,
 				3DB0F0251B6A790E00646048 /* NSData+LJLExtension.h */,
 				3DB0F0261B6A790E00646048 /* NSData+LJLExtension.m */,
+				3D67554B1B74A96E00051872 /* UIImage+LJLExtension.h */,
+				3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */,
+				3D67554E1B74A9C800051872 /* UIImageView+LJLExtension.h */,
+				3D67554F1B74A9C800051872 /* UIImageView+LJLExtension.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -708,6 +718,7 @@
 				3DB0F02A1B6A904900646048 /* LJLTopicViewController.m in Sources */,
 				3D3FFAD11B693B31000E7275 /* LJLConst.m in Sources */,
 				3D46DE171B62897500B5265A /* LJLRecommendUser.m in Sources */,
+				3D6755501B74A9C800051872 /* UIImageView+LJLExtension.m in Sources */,
 				3D4B3EC11B705D0300153351 /* LJLCommentViewController.m in Sources */,
 				3D7C76431B6C9CED008E752B /* LJLProgressView.m in Sources */,
 				3D4317A51B5FF41600D17883 /* LJLTabBar.m in Sources */,
@@ -719,6 +730,7 @@
 				3D179DB61B6E3A6C00C67042 /* LJLVoiceView.m in Sources */,
 				3D4650E51B70B20400C38DF0 /* LJLCommentHeaderView.m in Sources */,
 				3D4317A41B5FF41600D17883 /* main.m in Sources */,
+				3D67554D1B74A96E00051872 /* UIImage+LJLExtension.m in Sources */,
 				3D4B3EBA1B704F0A00153351 /* LJLUser.m in Sources */,
 				3D4317A81B5FF7DF00D17883 /* LJLNavigationController.m in Sources */,
 				3D7C76471B6C9F7D008E752B /* LJLShowPictureViewController.m in Sources */,

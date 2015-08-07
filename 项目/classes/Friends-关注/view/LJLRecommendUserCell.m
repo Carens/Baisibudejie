@@ -26,7 +26,7 @@
 - (void)setUser:(LJLRecommendUser *)user
 {
     _user = user;
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headerImageView setHeader:user.header];
     
     self.screenNameLabel.text = user.screen_name;
     

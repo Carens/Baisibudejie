@@ -44,7 +44,7 @@
     
     [self setupChildVC:[[LJLFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    [self setupChildVC:[[LJLMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupChildVC:[[LJLMeViewController alloc] initWithStyle:UITableViewStyleGrouped] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     [self setValue:[[LJLTabBar alloc] init] forKey:@"tabBar"];
 }

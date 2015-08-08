@@ -31,4 +31,6 @@
 #define LJLScreenW [UIScreen mainScreen].bounds.size.width
 #define LJLScreenH [UIScreen mainScreen].bounds.size.height
 
+#define LJLNoteCenter [NSNotificationCenter defaultCenter]
+
 #endif

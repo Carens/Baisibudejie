@@ -48,6 +48,9 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    
+    static BOOL added = NO;
+    
     CGFloat width = self.width;
     CGFloat height = self.height;
     
@@ -59,7 +62,7 @@
     CGFloat buttonW = width / 5;
     CGFloat buttonH = height;
     NSInteger index = 0;
-    for(UIView *button in self.subviews)
+    for(UIControl *button in self.subviews)
     {
         if(![button isKindOfClass:[UIControl class]] || button == self.publishButton)continue;
         
@@ -67,7 +70,18 @@
         CGFloat buttonX = buttonW * ((index > 1) ? index + 1 : index);
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         index++;
+        
+        //给每个控制器添加监听
+        if(added == NO){
+            [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    added = YES;
+}
+//点击按钮发送通知
+- (void)buttonClick
+{
+    [LJLNoteCenter postNotificationName:LJLTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 @end

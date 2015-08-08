@@ -21,3 +21,6 @@ NSString * const LJLUserSexFemale = @"f";
 
 /** 精华-cell-最热评论标题的高度 */
 CGFloat const LJLTopicCellTopCmtTitleH = 20;
+
+/** tabBar被选中的通知名字 */
+NSString * const LJLTabBarDidSelectNotification = @"LJLTabBarDidSelectNotification";

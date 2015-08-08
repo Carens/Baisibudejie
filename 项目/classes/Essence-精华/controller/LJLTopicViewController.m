@@ -27,6 +27,9 @@
 //最后一次的请求
 @property (nonatomic,strong) NSDictionary *params;
 
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
+
 @end
 
 @implementation LJLTopicViewController
@@ -64,6 +67,20 @@ static NSString * const LJLTopicCellID = @"topic";
     self.tableView.backgroundColor = [UIColor clearColor];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJLTopicCell class]) bundle:nil] forCellReuseIdentifier:LJLTopicCellID];
+    
+    //监听tabBar的点击
+    [LJLNoteCenter addObserver:self selector:@selector(tabBarSelect) name:LJLTabBarDidSelectNotification object:nil];
+}
+
+//监听tabBar点击
+- (void)tabBarSelect
+{
+    //判断这一次选中得索引是否与上一次的相同
+    if(self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow){
+        [self.tableView.header beginRefreshing];
+    }
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 - (void)setupRefresh

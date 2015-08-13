@@ -48,14 +48,19 @@
 		3D46DE1C1B628BBF00B5265A /* LJLRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46DE1A1B628BBF00B5265A /* LJLRecommendUserCell.xib */; };
 		3D4818081B6B60DE00CF3B13 /* LJLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4818071B6B60DE00CF3B13 /* LJLTopicPictureView.m */; };
 		3D48180A1B6B60FC00CF3B13 /* LJLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4818091B6B60FC00CF3B13 /* LJLTopicPictureView.xib */; };
-		3D4A98FC1B6D246B006731E0 /* LJLPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A98FB1B6D246B006731E0 /* LJLPublishView.m */; };
-		3D4A98FE1B6D248B006731E0 /* LJLPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4A98FD1B6D248B006731E0 /* LJLPublishView.xib */; };
 		3D4B3EBA1B704F0A00153351 /* LJLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EB91B704F0A00153351 /* LJLUser.m */; };
 		3D4B3EBD1B704F5E00153351 /* LJLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EBC1B704F5E00153351 /* LJLComment.m */; };
 		3D4B3EC11B705D0300153351 /* LJLCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B3EBF1B705D0300153351 /* LJLCommentViewController.m */; };
 		3D4B3EC21B705D0300153351 /* LJLCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4B3EC01B705D0300153351 /* LJLCommentViewController.xib */; };
+		3D520DB81B765495003FB118 /* LJLPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D520DB41B765495003FB118 /* LJLPublishView.m */; };
+		3D520DB91B765495003FB118 /* LJLPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D520DB51B765495003FB118 /* LJLPublishView.xib */; };
+		3D520DBC1B7654D9003FB118 /* LJLPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D520DBB1B7654D9003FB118 /* LJLPostWordViewController.m */; };
+		3D520DBF1B765B7D003FB118 /* LJLPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D520DBE1B765B7D003FB118 /* LJLPlaceholderTextView.m */; };
 		3D5530081B5F449E005EDA84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5530071B5F449E005EDA84 /* Images.xcassets */; };
 		3D5530171B5F449E005EDA84 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5530161B5F449E005EDA84 /* __Tests.m */; };
+		3D595E121B7B6E0D00F999E7 /* LJLAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D595E111B7B6E0D00F999E7 /* LJLAddTagToolbar.m */; };
+		3D595E141B7B6E2400F999E7 /* LJLAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D595E131B7B6E2400F999E7 /* LJLAddTagToolbar.xib */; };
+		3D5A4E8D1B7CDFAF0082D97B /* LJLAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A4E8C1B7CDFAF0082D97B /* LJLAddTagViewController.m */; };
 		3D67554D1B74A96E00051872 /* UIImage+LJLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */; };
 		3D6755501B74A9C800051872 /* UIImageView+LJLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67554F1B74A9C800051872 /* UIImageView+LJLExtension.m */; };
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
@@ -157,9 +162,6 @@
 		3D4818061B6B60DE00CF3B13 /* LJLTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLTopicPictureView.h; sourceTree = "<group>"; };
 		3D4818071B6B60DE00CF3B13 /* LJLTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLTopicPictureView.m; sourceTree = "<group>"; };
 		3D4818091B6B60FC00CF3B13 /* LJLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLTopicPictureView.xib; sourceTree = "<group>"; };
-		3D4A98FA1B6D246B006731E0 /* LJLPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPublishView.h; sourceTree = "<group>"; };
-		3D4A98FB1B6D246B006731E0 /* LJLPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPublishView.m; sourceTree = "<group>"; };
-		3D4A98FD1B6D248B006731E0 /* LJLPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLPublishView.xib; sourceTree = "<group>"; };
 		3D4B3EB81B704F0A00153351 /* LJLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLUser.h; sourceTree = "<group>"; };
 		3D4B3EB91B704F0A00153351 /* LJLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLUser.m; sourceTree = "<group>"; };
 		3D4B3EBB1B704F5E00153351 /* LJLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLComment.h; sourceTree = "<group>"; };
@@ -167,12 +169,24 @@
 		3D4B3EBE1B705D0300153351 /* LJLCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLCommentViewController.h; sourceTree = "<group>"; };
 		3D4B3EBF1B705D0300153351 /* LJLCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLCommentViewController.m; sourceTree = "<group>"; };
 		3D4B3EC01B705D0300153351 /* LJLCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLCommentViewController.xib; sourceTree = "<group>"; };
+		3D520DB31B765495003FB118 /* LJLPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPublishView.h; sourceTree = "<group>"; };
+		3D520DB41B765495003FB118 /* LJLPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPublishView.m; sourceTree = "<group>"; };
+		3D520DB51B765495003FB118 /* LJLPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLPublishView.xib; sourceTree = "<group>"; };
+		3D520DBA1B7654D9003FB118 /* LJLPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPostWordViewController.h; sourceTree = "<group>"; };
+		3D520DBB1B7654D9003FB118 /* LJLPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPostWordViewController.m; sourceTree = "<group>"; };
+		3D520DBD1B765B7D003FB118 /* LJLPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLPlaceholderTextView.h; sourceTree = "<group>"; };
+		3D520DBE1B765B7D003FB118 /* LJLPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLPlaceholderTextView.m; sourceTree = "<group>"; };
 		3D552FF71B5F449E005EDA84 /* 项目.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "项目.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D552FFB1B5F449E005EDA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D5530071B5F449E005EDA84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3D5530101B5F449E005EDA84 /* 项目Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "项目Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D5530151B5F449E005EDA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D5530161B5F449E005EDA84 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		3D595E101B7B6E0D00F999E7 /* LJLAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLAddTagToolbar.h; sourceTree = "<group>"; };
+		3D595E111B7B6E0D00F999E7 /* LJLAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLAddTagToolbar.m; sourceTree = "<group>"; };
+		3D595E131B7B6E2400F999E7 /* LJLAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLAddTagToolbar.xib; sourceTree = "<group>"; };
+		3D5A4E8B1B7CDFAF0082D97B /* LJLAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLAddTagViewController.h; sourceTree = "<group>"; };
+		3D5A4E8C1B7CDFAF0082D97B /* LJLAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLAddTagViewController.m; sourceTree = "<group>"; };
 		3D67554B1B74A96E00051872 /* UIImage+LJLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LJLExtension.h"; sourceTree = "<group>"; };
 		3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LJLExtension.m"; sourceTree = "<group>"; };
 		3D67554E1B74A9C800051872 /* UIImageView+LJLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LJLExtension.h"; sourceTree = "<group>"; };
@@ -231,6 +245,7 @@
 		3D4317731B5FF41600D17883 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				3D520DB11B765495003FB118 /* Publish-发布 */,
 				3D4317741B5FF41600D17883 /* Essence-精华 */,
 				3D43177A1B5FF41600D17883 /* Friends-关注 */,
 				3D4317801B5FF41600D17883 /* Me-我 */,
@@ -477,9 +492,6 @@
 				3D4317961B5FF41600D17883 /* LJLTabBarViewController.m */,
 				3D4317A61B5FF7DF00D17883 /* LJLNavigationController.h */,
 				3D4317A71B5FF7DF00D17883 /* LJLNavigationController.m */,
-				3D4A98FA1B6D246B006731E0 /* LJLPublishView.h */,
-				3D4A98FB1B6D246B006731E0 /* LJLPublishView.m */,
-				3D4A98FD1B6D248B006731E0 /* LJLPublishView.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -494,6 +506,49 @@
 				3D8EEB541B662F1700134ECB /* LJLPushGuideView.xib */,
 				3D3EB81A1B710E5A00810A05 /* LJLTopWindow.h */,
 				3D3EB81B1B710E5A00810A05 /* LJLTopWindow.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3D520DB11B765495003FB118 /* Publish-发布 */ = {
+			isa = PBXGroup;
+			children = (
+				3D520DB21B765495003FB118 /* controller */,
+				3D520DB61B765495003FB118 /* model */,
+				3D520DB71B765495003FB118 /* view */,
+			);
+			path = "Publish-发布";
+			sourceTree = "<group>";
+		};
+		3D520DB21B765495003FB118 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3D520DB31B765495003FB118 /* LJLPublishView.h */,
+				3D520DB41B765495003FB118 /* LJLPublishView.m */,
+				3D520DB51B765495003FB118 /* LJLPublishView.xib */,
+				3D520DBA1B7654D9003FB118 /* LJLPostWordViewController.h */,
+				3D520DBB1B7654D9003FB118 /* LJLPostWordViewController.m */,
+				3D5A4E8B1B7CDFAF0082D97B /* LJLAddTagViewController.h */,
+				3D5A4E8C1B7CDFAF0082D97B /* LJLAddTagViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3D520DB61B765495003FB118 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3D520DB71B765495003FB118 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3D520DBD1B765B7D003FB118 /* LJLPlaceholderTextView.h */,
+				3D520DBE1B765B7D003FB118 /* LJLPlaceholderTextView.m */,
+				3D595E101B7B6E0D00F999E7 /* LJLAddTagToolbar.h */,
+				3D595E111B7B6E0D00F999E7 /* LJLAddTagToolbar.m */,
+				3D595E131B7B6E2400F999E7 /* LJLAddTagToolbar.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -662,13 +717,14 @@
 				3D683FED1B64FD860098EC71 /* LJLLoginRegisterViewController.xib in Resources */,
 				3D44B3211B6E697A00FB0E65 /* LJLVideoView.xib in Resources */,
 				3D4650EA1B70B7E100C38DF0 /* LJLCommentCell.xib in Resources */,
+				3D520DB91B765495003FB118 /* LJLPublishView.xib in Resources */,
 				3D3FFACE1B692741000E7275 /* LJLTopicCell.xib in Resources */,
+				3D595E141B7B6E2400F999E7 /* LJLAddTagToolbar.xib in Resources */,
 				3D48180A1B6B60FC00CF3B13 /* LJLTopicPictureView.xib in Resources */,
 				3D4B3EC21B705D0300153351 /* LJLCommentViewController.xib in Resources */,
 				3D46DE1C1B628BBF00B5265A /* LJLRecommendUserCell.xib in Resources */,
 				3D4317AF1B6005CD00D17883 /* LJLRecommendViewController.xib in Resources */,
 				3D3B04071B624EEE002CC74E /* LJLRecommendCategoryCell.xib in Resources */,
-				3D4A98FE1B6D248B006731E0 /* LJLPublishView.xib in Resources */,
 				3D41030E1B75FE040026A83C /* LJLWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +780,7 @@
 				3DB0F0271B6A790E00646048 /* NSData+LJLExtension.m in Sources */,
 				3D43179F1B5FF41600D17883 /* LJLNewViewController.m in Sources */,
 				3D4317A31B5FF41600D17883 /* LJLTabBarViewController.m in Sources */,
+				3D520DBF1B765B7D003FB118 /* LJLPlaceholderTextView.m in Sources */,
 				3D4317B11B600B2B00D17883 /* Foundation+Log .m in Sources */,
 				3D44B31F1B6E696D00FB0E65 /* LJLVideoView.m in Sources */,
 				3D43179C1B5FF41600D17883 /* LJLEssenceViewController.m in Sources */,
@@ -735,6 +792,8 @@
 				3D4317A21B5FF41600D17883 /* UIView+LJLExtension.m in Sources */,
 				3DA244421B654D3100DA1931 /* LJLTextField.m in Sources */,
 				3D4818081B6B60DE00CF3B13 /* LJLTopicPictureView.m in Sources */,
+				3D595E121B7B6E0D00F999E7 /* LJLAddTagToolbar.m in Sources */,
+				3D520DB81B765495003FB118 /* LJLPublishView.m in Sources */,
 				3D4317A11B5FF41600D17883 /* UIBarButtonItem+LJLExtension.m in Sources */,
 				3D41030D1B75FE040026A83C /* LJLWebViewController.m in Sources */,
 				3DFA0B0D1B638B45003FE085 /* LJLRecommendTag.m in Sources */,
@@ -743,6 +802,8 @@
 				3D46DE171B62897500B5265A /* LJLRecommendUser.m in Sources */,
 				3D6755501B74A9C800051872 /* UIImageView+LJLExtension.m in Sources */,
 				3D4B3EC11B705D0300153351 /* LJLCommentViewController.m in Sources */,
+				3D5A4E8D1B7CDFAF0082D97B /* LJLAddTagViewController.m in Sources */,
+				3D520DBC1B7654D9003FB118 /* LJLPostWordViewController.m in Sources */,
 				3D7C76431B6C9CED008E752B /* LJLProgressView.m in Sources */,
 				3D4317A51B5FF41600D17883 /* LJLTabBar.m in Sources */,
 				3D43179E1B5FF41600D17883 /* LJLMeViewController.m in Sources */,
@@ -751,7 +812,6 @@
 				3D4102ED1B75DC2B0026A83C /* LJLMeCell.m in Sources */,
 				3D4650E91B70B7E100C38DF0 /* LJLCommentCell.m in Sources */,
 				3D4103001B75F73A0026A83C /* LJLSquare.m in Sources */,
-				3D4A98FC1B6D246B006731E0 /* LJLPublishView.m in Sources */,
 				3D179DB61B6E3A6C00C67042 /* LJLVoiceView.m in Sources */,
 				3D4650E51B70B20400C38DF0 /* LJLCommentHeaderView.m in Sources */,
 				3D4317A41B5FF41600D17883 /* main.m in Sources */,

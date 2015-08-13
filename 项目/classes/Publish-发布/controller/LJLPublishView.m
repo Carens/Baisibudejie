@@ -9,6 +9,8 @@
 #import "LJLPublishView.h"
 #import "LJLVerticalButton.h"
 #import <POP.h>
+#import "LJLPostWordViewController.h"
+#import "LJLNavigationController.h"
 
 #define LJLRootView [UIApplication sharedApplication].keyWindow.rootViewController.view
 
@@ -88,6 +90,9 @@ static UIWindow *window_;
     CGFloat centerX = LJLScreenW * 0.5;
     CGFloat centerEndY = LJLScreenH * 0.2;
     CGFloat centerBeginY = centerEndY - LJLScreenH;
+    
+    sloganView.centerY = centerBeginY;
+    sloganView.centerX = centerX;
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerBeginY)];
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
     anim.beginTime = CACurrentMediaTime() + images.count * LJLAnimationDelay;
@@ -109,6 +114,13 @@ static UIWindow *window_;
             LJLLog(@"发视频");
         } else if (button.tag == 1) {
             LJLLog(@"发图片");
+        }else if(button.tag == 2){
+            LJLPostWordViewController *post = [[LJLPostWordViewController alloc] init];
+            LJLNavigationController *nav = [[LJLNavigationController alloc] initWithRootViewController:post];
+            
+          
+            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [root presentViewController:nav animated:YES completion:nil];
         }
     }];
 }

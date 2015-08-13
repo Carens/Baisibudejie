@@ -24,3 +24,6 @@ CGFloat const LJLTopicCellTopCmtTitleH = 20;
 
 /** tabBar被选中的通知名字 */
 NSString * const LJLTabBarDidSelectNotification = @"LJLTabBarDidSelectNotification";
+
+/** 标签-间距 */
+CGFloat const LJLTagMargin = 5;

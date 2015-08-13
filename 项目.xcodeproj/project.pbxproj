@@ -61,6 +61,7 @@
 		3D595E121B7B6E0D00F999E7 /* LJLAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D595E111B7B6E0D00F999E7 /* LJLAddTagToolbar.m */; };
 		3D595E141B7B6E2400F999E7 /* LJLAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D595E131B7B6E2400F999E7 /* LJLAddTagToolbar.xib */; };
 		3D5A4E8D1B7CDFAF0082D97B /* LJLAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A4E8C1B7CDFAF0082D97B /* LJLAddTagViewController.m */; };
+		3D5A4E901B7CEE390082D97B /* LJLTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A4E8F1B7CEE390082D97B /* LJLTagButton.m */; };
 		3D67554D1B74A96E00051872 /* UIImage+LJLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */; };
 		3D6755501B74A9C800051872 /* UIImageView+LJLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67554F1B74A9C800051872 /* UIImageView+LJLExtension.m */; };
 		3D683FEC1B64FD860098EC71 /* LJLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D683FEA1B64FD860098EC71 /* LJLLoginRegisterViewController.m */; };
@@ -187,6 +188,8 @@
 		3D595E131B7B6E2400F999E7 /* LJLAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLAddTagToolbar.xib; sourceTree = "<group>"; };
 		3D5A4E8B1B7CDFAF0082D97B /* LJLAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLAddTagViewController.h; sourceTree = "<group>"; };
 		3D5A4E8C1B7CDFAF0082D97B /* LJLAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLAddTagViewController.m; sourceTree = "<group>"; };
+		3D5A4E8E1B7CEE390082D97B /* LJLTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLTagButton.h; sourceTree = "<group>"; };
+		3D5A4E8F1B7CEE390082D97B /* LJLTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLTagButton.m; sourceTree = "<group>"; };
 		3D67554B1B74A96E00051872 /* UIImage+LJLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LJLExtension.h"; sourceTree = "<group>"; };
 		3D67554C1B74A96E00051872 /* UIImage+LJLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LJLExtension.m"; sourceTree = "<group>"; };
 		3D67554E1B74A9C800051872 /* UIImageView+LJLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LJLExtension.h"; sourceTree = "<group>"; };
@@ -549,6 +552,8 @@
 				3D595E101B7B6E0D00F999E7 /* LJLAddTagToolbar.h */,
 				3D595E111B7B6E0D00F999E7 /* LJLAddTagToolbar.m */,
 				3D595E131B7B6E2400F999E7 /* LJLAddTagToolbar.xib */,
+				3D5A4E8E1B7CEE390082D97B /* LJLTagButton.h */,
+				3D5A4E8F1B7CEE390082D97B /* LJLTagButton.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -793,6 +798,7 @@
 				3DA244421B654D3100DA1931 /* LJLTextField.m in Sources */,
 				3D4818081B6B60DE00CF3B13 /* LJLTopicPictureView.m in Sources */,
 				3D595E121B7B6E0D00F999E7 /* LJLAddTagToolbar.m in Sources */,
+				3D5A4E901B7CEE390082D97B /* LJLTagButton.m in Sources */,
 				3D520DB81B765495003FB118 /* LJLPublishView.m in Sources */,
 				3D4317A11B5FF41600D17883 /* UIBarButtonItem+LJLExtension.m in Sources */,
 				3D41030D1B75FE040026A83C /* LJLWebViewController.m in Sources */,

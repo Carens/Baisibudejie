@@ -34,3 +34,5 @@ UIKIT_EXTERN CGFloat const LJLTopicCellTopCmtTitleH;
 
 /** tabBar被选中的通知名字 */
 UIKIT_EXTERN NSString * const LJLTabBarDidSelectNotification;
+//标签间距
+UIKIT_EXTERN CGFloat const LJLTagMargin;

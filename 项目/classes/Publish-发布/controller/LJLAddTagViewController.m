@@ -8,12 +8,15 @@
 
 #import "LJLAddTagViewController.h"
 #import "LJLTagButton.h"
+#import "LJLTagTextField.h"
+#import <SVProgressHUD.h>
 
-@interface LJLAddTagViewController ()
+@interface LJLAddTagViewController ()<UITextFieldDelegate>
+
+/** 文本输入框 */
+@property (nonatomic, weak) LJLTagTextfield *textField;
 
 @property (nonatomic,weak) UIView *contentView;
-
-@property (nonatomic,weak) UITextField *textField;
 
 @property (nonatomic,weak) UIButton *addButton;
 
@@ -57,40 +60,52 @@
     
     [self setupNav];
     
-    [self setupContentView];
-    
-    [self setupTextField];
-    
     
 }
 /**
  *  设置textFiled
  */
-- (void)setupTextField
+- (LJLTagTextfield *)textField
 {
-    UITextField *textField = [[UITextField alloc] init];
-    textField.width = LJLScreenW;
-    textField.height = 25;
-    textField.placeholder = @"多个标签用逗号或者换行隔开";
-    [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
-    
-    [textField becomeFirstResponder];
-    [self.contentView addSubview:textField];
-    self.textField = textField;
+    if (!_textField) {
+        __weak typeof(self) weakSelf = self;
+        LJLTagTextfield *textField = [[LJLTagTextfield alloc] init];
+        textField.deleteBlock = ^{
+            if (weakSelf.textField.hasText) return;
+            
+            [weakSelf tagButtonClick:[weakSelf.tagButtons lastObject]];
+        };
+        textField.delegate = self;
+        [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+//        [textField becomeFirstResponder];
+        [self.contentView addSubview:textField];
+        self.textField = textField;
+    }
+    return _textField;
 }
 
 //设置内容控件
-- (void)setupContentView
+- (UIView *)contentView
 {
-    UIView *contentView = [[UIView alloc] init];
-    contentView.x = LJLTopicCellMargin;
-    contentView.width = self.view.width - 2 * contentView.x;
-    contentView.y = 64 + LJLTopicCellMargin;
-    contentView.height = LJLScreenH;
-    [self.view addSubview:contentView];
-    self.contentView = contentView;
+    if (!_contentView) {
+        UIView *contentView = [[UIView alloc] init];
+        [self.view addSubview:contentView];
+        self.contentView = contentView;
+    }
+    return _contentView;
 }
 
+- (void)setupTags
+{
+    if (self.tags.count) {
+        for (NSString *tag in self.tags) {
+            self.textField.text = tag;
+            [self addButtonClick];
+        }
+        
+        self.tags = nil;
+    }
+}
 //设置导航栏
 - (void)setupNav
 {
@@ -103,24 +118,70 @@
 //监听导航右边按钮点击
 - (void)done
 {
+    // 传递tags给这个block
+    NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
+    !self.tagsBlock ? : self.tagsBlock(tags);
     
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-//监听文字改变
-- (void)textDidChange{
+
+/**
+ * 布局控制器view的子控件
+ */
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
     
-    if(self.textField.hasText){
+    self.contentView.x = LJLTagMargin;
+    self.contentView.width = self.view.width - 2 * self.contentView.x;
+    self.contentView.y = 64 + LJLTagMargin;
+    self.contentView.height = LJLScreenH;
+    
+    self.textField.width = self.contentView.width;
+    
+    self.addButton.width = self.contentView.width;
+    
+    [self setupTags];
+}
+
+/**
+ * 监听文字改变
+ */
+- (void)textDidChange
+{
+    // 更新文本框的frame
+    [self updateTextFieldFrame];
+    
+    if (self.textField.hasText) { // 有文字
+        // 显示"添加标签"的按钮
         self.addButton.hidden = NO;
-        self.addButton.y = CGRectGetMaxY(self.textField.frame) + LJLTopicCellMargin;
+        self.addButton.y = CGRectGetMaxY(self.textField.frame) + LJLTagMargin;
         [self.addButton setTitle:[NSString stringWithFormat:@"添加标签: %@", self.textField.text] forState:UIControlStateNormal];
-    }else{
+        
+        // 获得最后一个字符
+        NSString *text = self.textField.text;
+        NSUInteger len = text.length;
+        NSString *lastLetter = [text substringFromIndex:len - 1];
+        if ([lastLetter isEqualToString:@","]
+            || [lastLetter isEqualToString:@"，"]) {
+            // 去除逗号
+            self.textField.text = [text substringToIndex:len - 1];
+            
+            [self addButtonClick];
+        }
+    } else { // 没有文字
+        // 隐藏"添加标签"的按钮
         self.addButton.hidden = YES;
     }
 }
-
 //监听添加按钮点击
 - (void)addButtonClick
 {
+    if (self.tagButtons.count == 5) {
+        [SVProgressHUD showErrorWithStatus:@"最多添加5个标签" maskType:SVProgressHUDMaskTypeBlack];
+        return;
+    }
     
     // 添加一个"标签按钮"
     LJLTagButton *tagButton = [LJLTagButton buttonWithType:UIButtonTypeCustom];
@@ -136,6 +197,10 @@
     // 清空textField文字
     self.textField.text = nil;
     self.addButton.hidden = YES;
+    
+    // 更新标签按钮的frame
+    [self updateTagButtonFrame];
+    [self updateTextFieldFrame];
 }
 
 /**
@@ -149,6 +214,7 @@
     // 重新更新所有标签按钮的frame
     [UIView animateWithDuration:0.25 animations:^{
         [self updateTagButtonFrame];
+        [self updateTextFieldFrame];
     }];
 }
 
@@ -196,6 +262,29 @@
 }
 
 /**
+ * 更新textField的frame
+ */
+- (void)updateTextFieldFrame
+{
+    // 最后一个标签按钮
+    LJLTagButton *lastTagButton = [self.tagButtons lastObject];
+    CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + LJLTagMargin;
+    
+    // 更新textField的frame
+    if (self.contentView.width - leftWidth >= [self textFieldTextWidth]) {
+        self.textField.y = lastTagButton.y;
+        self.textField.x = leftWidth;
+    } else {
+        self.textField.x = 0;
+        self.textField.y = CGRectGetMaxY(lastTagButton.frame) + LJLTagMargin;
+    }
+    
+    // 更新“添加标签”的frame
+    self.addButton.y = CGRectGetMaxY(self.textField.frame) + LJLTagMargin;
+}
+
+
+/**
  * textField的文字宽度
  */
 - (CGFloat)textFieldTextWidth
@@ -204,6 +293,17 @@
     return MAX(100, textW);
 }
 
+#pragma mark - <UITextFieldDelegate>
+/**
+ * 监听键盘最右下角按钮的点击（return key， 比如“换行”、“完成”等等）
+ */
+- (BOOL)textFieldShouldReturn:(LJLTagTextfield *)textField
+{
+    if (textField.hasText) {
+        [self addButtonClick];
+    }
+    return YES;
+}
 
 
 @end

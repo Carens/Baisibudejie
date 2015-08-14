@@ -27,3 +27,6 @@ NSString * const LJLTabBarDidSelectNotification = @"LJLTabBarDidSelectNotificati
 
 /** 标签-间距 */
 CGFloat const LJLTagMargin = 5;
+
+/** 标签-高度 */
+CGFloat const LJLTagH = 25;

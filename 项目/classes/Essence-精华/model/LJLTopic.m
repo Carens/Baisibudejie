@@ -82,8 +82,8 @@
        
         //文字部分的高度
         _cellHeight = LJLTopicCellTextY + textH + LJLTopicCellMargin;
-        self.width = 100;
-        self.height = 100;
+        self.width = 300;
+        self.height = 400;
         //根据中间类型计算cell中间部分
         if(self.type == LJLTopicTypePicture){//图片帖子
             

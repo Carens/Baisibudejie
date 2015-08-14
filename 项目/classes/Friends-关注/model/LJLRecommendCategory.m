@@ -7,8 +7,15 @@
 //
 
 #import "LJLRecommendCategory.h"
+#import <MJRefresh.h>
 
 @implementation LJLRecommendCategory
+
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+
+}
 
 - (NSMutableArray *)users
 {

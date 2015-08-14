@@ -36,3 +36,5 @@ UIKIT_EXTERN CGFloat const LJLTopicCellTopCmtTitleH;
 UIKIT_EXTERN NSString * const LJLTabBarDidSelectNotification;
 //标签间距
 UIKIT_EXTERN CGFloat const LJLTagMargin;
+
+UIKIT_EXTERN CGFloat const LJLTagH;

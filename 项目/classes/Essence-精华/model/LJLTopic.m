@@ -76,14 +76,14 @@
 {
     if(!_cellHeight){
         //文字的最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJLTopicCellMargin , MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 2 * LJLTopicCellMargin , MAXFLOAT);
         //文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
        
         //文字部分的高度
         _cellHeight = LJLTopicCellTextY + textH + LJLTopicCellMargin;
-        self.width = 300;
-        self.height = 400;
+//        self.width = 300;
+//        self.height = 400;
         //根据中间类型计算cell中间部分
         if(self.type == LJLTopicTypePicture){//图片帖子
             
